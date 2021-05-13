@@ -124,15 +124,15 @@ a {
   font-weight: 800;
 
   @include large {
-    font-size: 3.25rem;
+    font-size: 3.5rem;
   }
 
   @include medium {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
 
   @include small {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 }
 
@@ -190,7 +190,7 @@ a {
   h6 {
     margin-top: 2rem;
     margin-bottom: 1rem;
-    font-weight: normal;
+    font-weight: 500;
     color: $section-headings-color;
   }
 
@@ -332,6 +332,7 @@ a {
 }
 
 .site-footer {
+  text-align: center;
   padding-top: 2rem;
   margin-top: 2rem;
   border-top: solid 1px $hr-border-color;
@@ -356,4 +357,13 @@ a {
 
 .site-footer-credits {
   color: $blockquote-text-color;
+
+  a {
+	color: $blockquote-text-color;
+	text-decoration: none;
+
+	&:hover {
+	  text-decoration: underline;
+	}
+  }
 }
