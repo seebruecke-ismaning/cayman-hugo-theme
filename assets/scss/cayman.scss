@@ -106,7 +106,7 @@ a {
   background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
 
   @include large {
-    padding: 5rem 6rem;
+    padding: 4rem 6rem;
   }
 
   @include medium {
@@ -124,7 +124,7 @@ a {
   font-weight: 800;
 
   @include large {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   @include medium {
@@ -133,6 +133,15 @@ a {
 
   @include small {
     font-size: 2rem;
+  }
+
+  a {
+    color: $header-heading-color;
+  }
+
+  a:hover {
+    text-decoration: none;
+    opacity: 0.9;
   }
 }
 
@@ -190,7 +199,7 @@ a {
   h6 {
     margin-top: 2rem;
     margin-bottom: 1rem;
-    font-weight: 500;
+    font-weight: 800;
     color: $section-headings-color;
   }
 
