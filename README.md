@@ -40,7 +40,7 @@ git submodule update --remote --merge
 
 Thanks to [Jason Long](https://github.com/jasonlong) for creating the original Jekyll [Cayman Theme](https://github.com/jasonlong/cayman-theme).
 
-Thanks to [Zachary Betz](https://github.com/zwbetz-gh) for porting the Jekyll theme to Hugo [Cayman Theme](https://github.com/zwbetz-gh/cayman-hugo-theme).
+Thanks to [Zachary Betz](https://github.com/zwbetz-gh) for porting the original Jekyll theme to Hugo [Cayman Theme](https://github.com/zwbetz-gh/cayman-hugo-theme).
 
 ## License
 
