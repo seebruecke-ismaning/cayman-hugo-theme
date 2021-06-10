@@ -5,7 +5,7 @@ $medium-breakpoint: {{ $.Site.Params.medium_breakpoint | default "42em" }} !defa
 // Headers
 $header-heading-color: {{ $.Site.Params.header_heading_color | default "#fff" }} !default;
 $header-bg-color: {{ $.Site.Params.header_background_color | default "#159957" }} !default;
-$header-bg-color-secondary: {{ $.Site.Params.header_background_color_secondary | default "#155799" }} !default;
+// $header-bg-color-secondary: {{ $.Site.Params.header_background_color_secondary | default "#155799" }} !default;
 
 // Text
 $section-headings-color: {{ $.Site.Params.section_headings_color | default "#159957" }} !default;
@@ -64,38 +64,42 @@ a {
 
 .btn {
   display: inline-block;
-  margin-bottom: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0.3rem;
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  margin-bottom: 0rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: $header-heading-color;
+  text-transform: uppercase;
 
   &:hover {
-    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.3);
+    color: $header-bg-color;
+    background-color: $header-heading-color;
   }
 
   + .btn {
-    margin-left: 1rem;
+    margin-left: 1.2rem;
   }
 
   @include large {
-    padding: 0.75rem 1rem;
+    padding: 0.2rem 0.5rem;
   }
 
   @include medium {
-    padding: 0.6rem 0.9rem;
+    padding: 0.5rem 0.5rem;
     font-size: 0.9rem;
+    width: fit-content;
   }
 
   @include small {
-    padding: 0.75rem;
-    font-size: 0.9rem;
+    padding: 0.1rem;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    + .btn {
+      margin-left: 0rem;
+    }
   }
 }
 
@@ -103,24 +107,23 @@ a {
   color: $header-heading-color;
   text-align: center;
   background-color: $header-bg-color;
-  background-image: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
 
   @include large {
-    padding: 4rem 6rem;
+    padding: 0.5rem 4rem;
   }
 
   @include medium {
-    padding: 3rem 4rem;
+    padding: 2rem 4rem;
   }
 
   @include small {
-    padding: 2rem 1rem;
+    padding: 0.5rem 0.5rem;
   }
 }
 
 .project-name {
-  margin-top: 0;
-  margin-bottom: 0.1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   font-weight: 800;
 
   @include large {
@@ -128,11 +131,12 @@ a {
   }
 
   @include medium {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   @include small {
     font-size: 2rem;
+    line-height: 1em;
   }
 
   a {
@@ -183,7 +187,7 @@ a {
   }
 
   @include small {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     font-size: 1rem;
   }
 
@@ -376,10 +380,10 @@ a {
 }
 
 .site-footer-credits {
-  color: $blockquote-text-color;
+  color: $body-text-color;
 
   a {
-    color: $blockquote-text-color;
+    color: $body-text-color;
     text-decoration: none;
 
   &:hover {
